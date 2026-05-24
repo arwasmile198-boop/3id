@@ -1,0 +1,205 @@
+/* إعدادات الخلفية والصفحة */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0d0118;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* إضاءة خلفية ناعمة في المنتصف */
+.background-glow {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(147, 51, 234, 0.2) 0%, transparent 70%);
+    z-index: 1;
+}
+
+.eid-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* تأثير حركة النص (Wave & Neon Glow) */
+.eid-text {
+    font-size: 5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 0 40px 0;
+    text-align: center;
+    line-height: 1.1;
+    letter-spacing: 5px;
+}
+
+.eid-text span {
+    display: inline-block;
+    animation: waveGlow 2s ease-in-out infinite;
+}
+
+/* توزيع الحركة على الحروف ليظهر تأثير الموجة */
+.eid-text span:nth-child(1) { animation-delay: 0.1s; }
+.eid-text span:nth-child(2) { animation-delay: 0.2s; }
+.eid-text span:nth-child(3) { animation-delay: 0.3s; }
+.eid-text span:nth-child(5) { animation-delay: 0.4s; }
+.eid-text span:nth-child(6) { animation-delay: 0.5s; }
+.eid-text span:nth-child(7) { animation-delay: 0.6s; }
+.eid-text span:nth-child(8) { animation-delay: 0.7s; }
+.eid-text span:nth-child(9) { animation-delay: 0.8s; }
+.eid-text span:nth-child(10) { animation-delay: 0.9s; }
+.eid-text span:nth-child(11) { animation-delay: 1s; }
+
+@keyframes waveGlow {
+    0%, 100% {
+        transform: translateY(0);
+        text-shadow: 0 0 10px #3b82f6, 0 0 20px #3b82f6;
+        color: #fff;
+    }
+    50% {
+        transform: translateY(-15px);
+        text-shadow: 0 0 30px #ec4899, 0 0 40px #ec4899, 0 0 60px #ec4899;
+        color: #fbcfe8;
+    }
+}
+
+/* تصميم خروف العيد بالـ CSS بالكامل */
+.sheep-wrapper {
+    position: relative;
+    animation: floatSheep 3s ease-in-out infinite;
+}
+
+.sheep {
+    position: relative;
+    width: 160px;
+    height: 160px;
+}
+
+/* جسم الخروف (الصوف) */
+.body-wool {
+    width: 150px;
+    height: 110px;
+    background: #ffffff;
+    border-radius: 60px;
+    position: absolute;
+    bottom: 20px;
+    left: 5px;
+    box-shadow: 
+        0 10px 0 #e2e8f0,
+        -15px 10px 0 5px #fff, 15px 10px 0 5px #fff,
+        0 -15px 0 5px #fff;
+}
+
+/* وجه الخروف */
+.face {
+    width: 70px;
+    height: 80px;
+    background: #f1f5f9;
+    border-radius: 40px;
+    position: absolute;
+    top: 15px;
+    left: 45px;
+    z-index: 4;
+}
+
+/* صوف فوق الرأس */
+.head-wool {
+    width: 60px;
+    height: 35px;
+    background: #fff;
+    border-radius: 20px;
+    position: absolute;
+    top: 5px;
+    left: 50px;
+    z-index: 5;
+    box-shadow: 0 5px 0 #cbd5e1;
+}
+
+/* العيون والابتسامة */
+.eye {
+    width: 10px;
+    height: 10px;
+    background: #0f172a;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+}
+.eye.left { left: 15px; }
+.eye.right { right: 15px; }
+
+.smile {
+    width: 20px;
+    height: 10px;
+    border: 3px solid #0f172a;
+    border-top: none;
+    border-radius: 0 0 15px 15px;
+    position: absolute;
+    bottom: 20px;
+    left: 25px;
+}
+
+/* الأذنان */
+.ear {
+    width: 20px;
+    height: 40px;
+    background: #cbd5e1;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+    z-index: 3;
+}
+.ear.left { left: 30px; transform: rotate(30deg); }
+.ear.right { right: 30px; transform: rotate(-30deg); }
+
+/* القرون الذهبية */
+.horn {
+    width: 30px;
+    height: 30px;
+    border: 6px solid #fbbf24;
+    border-radius: 50%;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    position: absolute;
+    top: 5px;
+    z-index: 2;
+}
+.horn.left { left: 33px; transform: rotate(-45deg); }
+.horn.right { right: 33px; transform: rotate(135deg); }
+
+/* الأرجل */
+.legs {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 25px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.leg {
+    width: 14px;
+    height: 30px;
+    background: #0f172a;
+    border-radius: 7px;
+}
+
+/* حركات الخروف */
+@keyframes floatSheep {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-12px) scale(1.03);
+    }
+}
