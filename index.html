@@ -3,40 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eid Mubarak</title>
+    <title>Eid Mubarak - Moving Stars & Sheep Side Profile</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&display=swap" rel="stylesheet">
+    <!-- استدعاء خطوط مميزة من جوجل -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="background-glow"></div>
+    <!-- 1. طبقات النجوم المتحركة -->
+    <div class="stars-container">
+        <div class="stars_1"></div>
+        <div class="stars_2"></div>
+        <div class="stars_3"></div>
+    </div>
 
-    <div class="eid-container">
-        <h1 class="eid-text">
-            <span>E</span><span>i</span><span>d</span>
-            <br>
-            <span>M</span><span>u</span><span>b</span><span>a</span><span>r</span><span>a</span><span>k</span>
-        </h1>
+    <!-- 2. الزينة على الأطراف -->
+    <div class="decorations">
+        <div class="fanoos left"></div>
+        <div class="garland top-left"></div>
+        <div class="fanoos right"></div>
+        <div class="garland top-right"></div>
+    </div>
 
-        <div class="sheep-wrapper">
-            <div class="sheep">
-                <div class="horn left"></div>
-                <div class="horn right"></div>
-                <div class="head-wool"></div>
-                <div class="face">
-                    <div class="eye left"></div>
-                    <div class="eye right"></div>
-                    <div class="smile"></div>
+    <!-- 3. المحتوى الرئيسي -->
+    <div class="main-content">
+        <!-- النص الإنجليزي المتحرك -->
+        <h1 class="eid-text">Eid Mubarak</h1>
+
+        <!-- 4. خروف العيد واقف بالعرض -->
+        <div class="sheep-side-wrapper">
+            <div class="sheep-side">
+                <!-- الرأس والقرن (في الأمام) -->
+                <div class="head-side">
+                    <div class="horn-side"></div>
+                    <div class="eye-side"></div>
+                    <div class="ear-side"></div>
                 </div>
-                <div class="ear left"></div>
-                <div class="ear right"></div>
-                <div class="body-wool"></div>
-                <div class="legs">
-                    <div class="leg"></div>
-                    <div class="leg"></div>
-                    <div class="leg"></div>
-                    <div class="leg"></div>
+                <!-- الجسم (الجانب) -->
+                <div class="body-side-wool"></div>
+                <!-- الأرجل الجانبية (4 أرجل ظاهرة) -->
+                <div class="legs-side">
+                    <div class="leg-side back"></div>
+                    <div class="leg-side back-far"></div>
+                    <div class="leg-side front-far"></div>
+                    <div class="leg-side front"></div>
                 </div>
+                <!-- الذيل -->
+                <div class="tail-side"></div>
             </div>
         </div>
     </div>
